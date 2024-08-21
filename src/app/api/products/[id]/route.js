@@ -7,12 +7,33 @@ export async function PUT(request, { params }) {
   const { id } = params;
   const {
     newName: name,
-    newImage: image,
-    newPrice: price,
-    newCategory: category,
+    newProject: projiect,
+    newImplementation: implementation,
+    newEmail: email,
+    newMobile: mobile,
+    newBudget: budget,
+    newYear: year,
+    newEvaluation: evaluation,
+    newStrength: strength,
+    newWeak: weak,
+    newDeveiopment: deveiopment,
+    newSuggestion: suggestion,
   } = await request.json();
   await connectMongoDB();
-  await Product.findByIdAndUpdate(id, { name, image, price, category });
+  await Product.findByIdAndUpdate(id, {
+    name,
+    projiect,
+    implementation,
+    email,
+    mobile,
+    budget,
+    year,
+    evaluation,
+    strength,
+    weak,
+    deveiopment,
+    suggestion,
+  });
   return NextResponse.json({ message: "Product updated" }, { status: 200 });
 }
 

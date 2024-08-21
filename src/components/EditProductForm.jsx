@@ -4,11 +4,35 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditProductForm({ id, name, image, price, category }) {
+export default function EditProductForm({
+  id,
+  name,
+  project,
+  implementation,
+  email,
+  mobile,
+  budget,
+  year,
+  evaluation,
+  weak,
+  strength,
+  deveiopment,
+  suggestionl,
+}) {
   const [newName, setNewTitle] = useState(name);
-  const [newImage, setNewImage] = useState(image);
-  const [newPrice, setNewPrice] = useState(price);
-  const [newCategory, setNewCategory] = useState(category);
+  strength;
+  const [newProject, setNewProject] = useState(project);
+  const [newImplementation, setNewPrice] = useState(implementation;
+  const [newEmail, setNewEmail] = useState(email);
+  const [newMobile, setNewMobile] = useState(mobile);
+  const [newBudget, setNewBudget] = useState(budget);
+  const [newYear, setNewYear] = useState(year);
+  const [newEvaluation, setNewEvaluation] = useState(evaluation);
+  const [newStrength, setNewStrength] = useState(strength);
+  const [newWeak, setNewWeaK] = useState(weak);
+  const [newDeveiopment, setNewDevaiopment] = useState(deveiopment;
+  const [newSuggestion, setNewSuggestion] = useState(suggestionl);
+  
 
   const router = useRouter();
 
@@ -21,7 +45,7 @@ export default function EditProductForm({ id, name, image, price, category }) {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ newName, newImage, newPrice, newCategory }),
+        body: JSON.stringify({ newName, newProject, newImplementation, newEmail, newMobile, newBudget, newYear, newEvaluation, newWeak, newStrength, newDeveiopment, newSuggestion  }),
       });
 
       if (!res.ok) {
@@ -49,8 +73,8 @@ export default function EditProductForm({ id, name, image, price, category }) {
         />
 
         <input
-          onChange={(e) => setNewImage(e.target.value)}
-          value={newImage}
+          onChange={(e) => setNewProject(e.target.value)}
+          value={newProject}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
         />
@@ -61,8 +85,62 @@ export default function EditProductForm({ id, name, image, price, category }) {
           type="text"
         />
         <input
-          onChange={(e) => setNewCategory(e.target.value)}
+          onChange={(e) => setNewImplementation(e.target.value)}
           value={newCategory}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewEmail(e.target.value)}
+          value={newEmail}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewMobile(e.target.value)}
+          value={newMobile}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewBudget(e.target.value)}
+          value={newBudget}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewYear(e.target.value)}
+          value={newYear}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewEvaluation(e.target.value)}
+          value={newEvaluation}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewStrength(e.target.value)}
+          value={newStrength}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewWeaK(e.target.value)}
+          value={newWeak}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewDevaiopment(e.target.value)}
+          value={newDeveiopment}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+        />
+        <input
+          onChange={(e) => setNewSuggestion(e.target.value)}
+          value={newSuggestion}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
         />

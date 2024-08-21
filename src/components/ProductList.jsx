@@ -43,10 +43,20 @@ export default async function ProductsList() {
                   <input type="checkbox" className="checkbox" />
                 </label>
               </th>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Category</th>
+              <th>ยุทธศาสตร์</th>
+              <th>โครงการ</th>
+              <th>หน่วยงานที่นำนโยบายไปปฏิบัติ</th>
+              <th>อีเมล</th>
+              <th>โทรศัพท์</th>
+              <th>งบประมาณ (ล้านบาท)</th>
+              <th>ปีงบประมาณ</th>
+              <th>ผลประเมิน</th>
+              <th>จุดอ่อน</th>
+              <th>จุดแข็ง</th>
+              <th>แนวทางเสริมจุดแข็ง</th>
+              <th>ข้อเสนอแนะ</th>
               <th>Edit & Delete</th>
+             
             </tr>
           </thead>
           <tbody>
@@ -75,8 +85,16 @@ export default async function ProductsList() {
                     </div>
                   </div>
                 </td>
-                <td>฿{element.price}</td>
-                <td>{element.category}</td>
+                <td>{element.implementation}</td>
+                <td>{element.mobile}</td>
+                <td>{element.budget}</td>
+                <td>{element.year}</td>
+                <td>{element.evaluation}</td>
+                <td>{element.weak}</td>
+                <td>{element.strength}</td>
+                <td>{element.development}</td>
+                <td>{element.suggestion}</td>
+                <td>{element.email}</td>
                 <th>
                   <Link href={`/editProduct/${element._id}`}>
                     <button className="btn btn-primary">Edit</button>
